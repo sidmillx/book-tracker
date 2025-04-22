@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../../../environments/environment.prod';
 
 @Component({
   selector: 'app-book',
@@ -35,13 +36,13 @@ export class BookComponent {
   }
 
   getBooks() {
-    this.http.get("http://localhost:3000/api/books").subscribe((res: any) => {
+    this.http.get(`${environment.apiUrl}/api/books`).subscribe((res: any) => {
       this.bookArray = res;
   });
 }
 
   createBook(obj:any){
-    return this.http.post("http://localhost:3000/api/books", obj).subscribe((res: any) => {})
+    return this.http.post(`${environment.apiUrl}/api/books`, obj).subscribe((res: any) => {})
   }
 }
 

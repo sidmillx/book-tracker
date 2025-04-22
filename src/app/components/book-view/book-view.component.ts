@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Book } from '../../models/book.model';
+import { environment } from '../../../environments/environment.prod';
+
 
 @Component({
   selector: 'app-book-view',
@@ -22,7 +24,7 @@ export class BookViewComponent implements OnInit {
   }
 
   getBooks() {
-    this.http.get('http://localhost:3000/api/books').subscribe({
+    this.http.get(`${environment.apiUrl}/api/books`).subscribe({
       next: (res: any) => {
         this.bookArray = res;
       },

@@ -1,0 +1,94 @@
+<div class="form-header">
+  <h2 class="form-title">Book Information</h2>
+  <p class="form-description">
+    *Please fill in the details below to add this book to your collection. 
+  </p>
+</div>
+
+<form id="bookForm" class="book-form">
+    <div class="form-group">
+        <label for="title">Title *</label>
+        <input type="text" [(ngModel)]="bookObj.title" id="title" name="title" required class="form-control">
+      </div>
+    
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" [(ngModel)]="bookObj.author" id="author" name="author" class="form-control">
+      </div>
+    
+      <div class="form-group">
+        <label for="pages">Number of Pages</label>
+        <input type="number" [(ngModel)]="bookObj.pages" id="pages" name="pages" min="1" class="form-control">
+      </div>
+    
+      <div class="form-group">
+        <label for="category">Category/Genre</label>
+        <input type="text" [(ngModel)]="bookObj.category" id="category" name="category" class="form-control" list="categories">
+        <datalist id="categories">
+          <option value="Fiction">
+          <option value="Non-Fiction">
+          <option value="Science Fiction">
+          <option value="Fantasy">
+          <option value="Biography">
+          <option value="Self-Help">
+          <option value="Business">
+          <option value="Technology">
+        </datalist>
+      </div>
+    
+      <div class="form-group">
+        <label for="status">Reading Status</label>
+        <select id="status" [(ngModel)]="bookObj.status" name="status" class="form-control">
+          <option value="to-read" selected>To Read</option>
+          <option value="reading">Currently Reading</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+    
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="dateStarted">Date Started</label>
+          <input type="date" [(ngModel)]="bookObj.dateStarted" id="dateStarted" name="dateStarted" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="dateCompleted">Date Completed</label>
+          <input type="date" [(ngModel)]="bookObj.dateCompleted" id="dateCompleted" name="dateCompleted" class="form-control">
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="rating">Rating (1-5)</label>
+        <div class="rating-container">
+          <div class="star-rating">
+            <input type="radio" [(ngModel)]="bookObj.rating" id="star5" name="rating" value="5"><label for="star5">★</label>
+            <input type="radio" [(ngModel)]="bookObj.rating" id="star4" name="rating" value="4"><label for="star4">★</label>
+            <input type="radio" [(ngModel)]="bookObj.rating" id="star3" name="rating" value="3"><label for="star3">★</label>
+            <input type="radio" [(ngModel)]="bookObj.rating" id="star2" name="rating" value="2"><label for="star2">★</label>
+            <input type="radio" [(ngModel)]="bookObj.rating" id="star1" name="rating" value="1"><label for="star1">★</label>
+          </div>
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label for="lessons">Key Lessons Learned</label>
+        <textarea id="lessons" [(ngModel)]="bookObj.lessons" name="lessons" rows="3" class="form-control"></textarea>
+        <small class="form-text text-muted">What were the main takeaways from this book?</small>
+      </div>
+    
+      <div class="form-group">
+        <label for="applications">Practical Applications</label>
+        <textarea id="applications" [(ngModel)]="bookObj.applications" name="applications" rows="3" class="form-control"></textarea>
+        <small class="form-text text-muted">How can you apply what you learned?</small>
+      </div>
+    
+      <div class="form-group">
+        <label for="review">Review</label>
+        <textarea id="review" [(ngModel)]="bookObj.review" name="review" rows="5" class="form-control"></textarea>
+        <small class="form-text text-muted">Your personal thoughts about the book</small>
+      </div>
+    
+      <div class="form-actions">
+        <button type="reset" class="btn btn-secondary">Reset</button>
+        <button type="submit" class="btn btn-primary" (click)="saveBook()">Save Book</button>
+      </div>
+  </form>

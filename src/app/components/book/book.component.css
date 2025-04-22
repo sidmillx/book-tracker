@@ -1,0 +1,124 @@
+
+
+.book-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #191325; */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #0000001a;
+    color: #e9e7e3;
+  }
+
+
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    /* background-color: #0D0719; */
+    background-color: #191325;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: #AF9F82;
+    
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: hsl(21, 75%, 53%);
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .rating-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2rem;
+    line-height: 2rem;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+  }
+  
+  .star-rating input {
+    display: none;
+  }
+  
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .star-rating :checked ~ label {
+    color: #f90;
+  }
+  
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: #fc0;
+  }
+
+
+  .form-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    
+
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: #ffffff;
+  }
+  
+  .form-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin-bottom: 0.7rem;
+
+  }
+
+  .text-muted {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+  }

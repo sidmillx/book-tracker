@@ -1,0 +1,149 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 50px;
+    color: #000;
+}
+
+.book-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    /* border: solid 1px #fff; */
+    background-color:#191325;
+    color: #AF9F82;
+
+    position: relative;
+}
+
+h3, h2 {
+    color: #FFFFDC;
+}
+
+h2 {
+    padding-left: 50px;
+}
+
+img {
+    max-width: 200px;
+}
+
+.book-image {
+    text-align: center;
+    background-color: #0D0719;
+    width: 100%;
+}
+
+/* .status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+} */
+
+.status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+  
+  /* Status-specific colors */
+  .status.to-read {
+    background: rgba(255, 213, 79, 0.2);
+    color: #FFD54F;                    
+    border-color: rgba(255, 213, 79, 0.3);
+  }
+  
+  .status.reading {
+    background: rgba(100, 181, 246, 0.2); 
+    color: #64B5F6;                   
+    border-color: rgba(100, 181, 246, 0.3);
+    animation: pulse 2s infinite;
+  }
+  
+  .status.completed {
+    background: rgba(102, 187, 106, 0.2);
+    color: #66BB6A;                    
+    border-color: rgba(102, 187, 106, 0.3);
+  }
+  
+  /* Optional: With icons */
+  .status.to-read::before {
+    content: "⏳ ";
+  }
+  
+  .status.reading::before {
+    content: "📖 ";
+  }
+  
+  .status.completed::before {
+    content: "✅ ";
+  }
+
+.book-header {
+    padding: 10px;
+}
+
+.author {
+    font-size: 14px;
+}
+
+.stars {
+    display: inline-flex;
+    position: relative;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .stars .filled {
+    color: #FFD700; 
+    text-shadow: 0 0 4px rgba(255, 215, 0, 0.4);
+  }
+
+  .rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 8px;
+  }
+
+  .rating-text {
+    font-size: 14px;
+  }
+
+  
+
+  .tags {
+    color: #AF9F82;
+    display: flex;
+    column-gap: 15px;
+    margin: 40px 0 30px 50px;
+  }
+
+  .tags .active {
+    color: #fff;
+
+  }
+
+.tags .tags__tag{
+  background-color: #191325;
+  padding: 8px 12px 8px 12px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}

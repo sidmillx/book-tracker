@@ -1,0 +1,52 @@
+<section class="tags">
+    <div class="tags__tag active">All</div>
+    <div class="tags__tag">Reading</div>
+    <div class="tags__tag">Completed</div>
+    <div class="tags__tag">To-Read</div>
+    <div class="tags__tag">Finance</div>
+    <div class="tags__tag">Entrepreneurship</div>
+    <div class="tags__tag">Spiritual</div>
+</section>
+
+
+
+<section class="book-list">
+    <h2>Your Books</h2>
+    <div class="container">
+        <div *ngFor="let book of bookArray" class="book-card" (click)="toggleBookDetails(book)">
+            <div class="book-image">
+                <img [src]="book.image || 'assets/default-book-cover.png'" alt="{{ book.title }} cover" />
+            </div>
+            <div class="book-header">
+                <h3>{{book.title}}</h3>
+                <p class="author">{{ book.author || 'Unknown Author'}}</p>
+                <div class="rating">
+                    <div>
+                        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+                        {{i < book.rating ? '★' : '☆'}}
+                        </span>
+                    </div>
+                    <div class="rating-text">
+                        <span >{{ book.rating ? book.rating : 'No ratings'}}</span>
+                        stars
+                    </div>
+                    
+                </div>
+                <span class="status {{ book.status }}"> {{ book.status }} </span>
+            </div>
+
+            <!-- EXPANDED RESULTS -->
+             <div *ngIf="selectedBook === book" class="book-details">
+                <p><strong>Pages:</strong> {{ book.pages || 'N/A' }}</p>
+                <p><strong>Category:</strong> {{ book.category || 'N/A' }}</p>
+                <p><strong>Date Started:</strong> {{ book.dateStarted || 'N/A' }}</p>
+                <p><strong>Date Completed:</strong> {{ book.dateCompleted || 'N/A' }}</p>
+                <p><strong>Rating:</strong> {{ book.rating || 'N/A' }}</p>
+                <p><strong>Lessons Learned:</strong> {{ book.lessons || 'N/A' }}</p>
+                <p><strong>Applications:</strong> {{ book.applications || 'N/A' }}</p>
+                <p><strong>Review</strong> {{ book.review || 'No review'}}</p>
+             </div>
+        </div>
+    </div>
+</section>
+

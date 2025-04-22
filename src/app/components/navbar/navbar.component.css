@@ -1,0 +1,23 @@
+nav {
+    font-family: 'Poppins';
+    padding: 10px 20px;
+}
+nav.home-nav {
+    background-color: #2C214C;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffdc;
+
+    padding: 10px 20px;
+    display: block;
+}
+

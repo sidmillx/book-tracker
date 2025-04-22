@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: '/api' // Will be proxied through Vercel
+    apiUrl: 'https://book-tracker-api.onrender.com' // Will be proxied through Vercel
 };
